@@ -10,7 +10,7 @@ module.exports = {
     }
     cloudant.getDocs(params, (err, docs) => {
       if (err) callback(err)
-      callback(null, docs[0])
+      callback(null, docs)
     });
   },
   addUser (params, callback){

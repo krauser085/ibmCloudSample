@@ -7,7 +7,8 @@ router.get('/', function (req, res, next) {
   const name = req.param('name')
   user.getUserWithName(name, (err, user) => {
     if (err) next('failed to get a User with username')
-    res.send(201, { user })
+    console.log(user)
+    res.render('../views/users/showUser.ejs', { users:user} )
   })
 })
 
