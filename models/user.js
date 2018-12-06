@@ -18,5 +18,11 @@ module.exports = {
       if(err) callback(err)
       callback(null,response)
     })
+  },
+  deleteUser(_id, _rev, callback){
+    cloudant.deleteUser(_id, _rev, (err,response) => {
+      if(err) callback(err)
+      callback(null, response)
+    })
   }
 }
